@@ -1,0 +1,12 @@
+.navLogo {
+  position: relative;
+  bottom: 10px;
+  height: 40px;
+  width: 40px;
+  display: inline;
+}
+
+h4 {
+  display: inline;
+  position: relative;
+}
