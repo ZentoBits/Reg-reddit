@@ -1,0 +1,33 @@
+{
+  "name": "Reg-reddit",
+  "version": "1.0.0",
+  "description": "reddit clone",
+  "main": "server.js",
+  "engines": {
+    "node": "6"
+  },
+  "scripts": {
+   "test": "echo \"Error: no test specified\" && exit 1",
+   "start": "node server.js",
+   "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZentoBits/Reg-reddit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZentoBits/Reg-reddit/issues"
+  },
+  "homepage": "https://github.com/ZentoBits/Reg-reddit#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "bower": "^1.7.9",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.0",
+    "pug": "^2.0.0-beta6"
+  }
+}
