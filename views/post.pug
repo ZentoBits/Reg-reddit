@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title Reg-reddit
+    link(rel='stylesheet' href='/lib/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet' href='css/main.css')
+  body
+    nav(class="navbar navbar-default")
+      div(class="container-fluid")
+        div(class="navbar-header")
+          a(class="navbar-brand" href="/")
+            img(alt="Brand" src="imgs/redditGuy.png" class="navLogo")
+          a(class="navbar-brand" href="/")
+            h4 Regreddit
+
+  .contact-form
+    form(method='POST')
+      .form-group
+        label(for='img') IMG
+        input.form-control#img(types='text' name='img-url' placeholder='img-url')
+      .form-group
+        label(for='subject') Subject
+        input.form-control#subject(types='text' name='subject' placeholder='Subject')
+      .form-group
+        label(for='url') URL
+        input.form-control#url(types='text' name='url' placeholder='url')
+
+  a(class="postBtn" href="/")
+    button(type="button" class="btn btn-warning") POST

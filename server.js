@@ -2,6 +2,8 @@
 
 const express = require('express');
 
+const { connect } = require('./database')
+
 const app = express()
 
 const port = process.env.PORT || 3000
@@ -17,6 +19,14 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
+app.get('/post', (req, res) => {
+  res.render('post')
 })
+
+connect()
+  .then(() => {
+    app.listen(port, () =>
+      console.log(`Listening on port: ${port}`)
+    )
+  })
+  .catch(console.error)
