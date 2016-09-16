@@ -38,6 +38,32 @@ app.post('/makePost', (req, res) => {
   .catch(console.error)
 })
 
+app.post('/:id/up', (req, res) => {
+  let postID = req.params.id
+  makePost.findById(postID, (err, docs) => {
+    docs.vote++
+    docs.save((err) => {
+      if (err) {
+        console.log(err);
+      }
+      res.redirect('/')
+    })
+  })
+})
+
+app.post('/:id/down', (req, res) => {
+  let postID = req.params.id
+  makePost.findById(postID, (err, docs) => {
+    docs.vote--
+    docs.save((err) => {
+      if (err) {
+        console.log(err);
+      }
+      res.redirect('/')
+    })
+  })
+})
+
 connect()
   .then(() => {
     app.listen(port, () =>

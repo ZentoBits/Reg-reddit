@@ -20,3 +20,11 @@ html
         .postStyle
           a(href= post.url): h1 #{post.subject}
           img(src= post.img)
+        .upVote
+          form(action=`/${post._id}/up` method='POST')
+            button(type="submit" class="btn btn-warning") +
+        .voteNum
+          p #{post.vote}
+        .downVote
+          form(action=`/${post._id}/down` method='POST')
+            button(type="submit" class="btn btn-warning") -

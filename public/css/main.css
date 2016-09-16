@@ -15,3 +15,15 @@ h4 {
   height: 100px;
   width: 100px;
 }
+
+.upVote {
+  height: 25px;
+  width: 25px;
+  background: grey;
+}
+
+.downVote {
+  height: 25px;
+  width: 25px;
+  background: grey;
+}
