@@ -10,3 +10,8 @@ h4 {
   display: inline;
   position: relative;
 }
+
+.postStyle img {
+  height: 100px;
+  width: 100px;
+}

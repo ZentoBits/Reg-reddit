@@ -14,3 +14,9 @@ html
             h4 Regreddit
           a(class="addPost" href="/makePost")
             button(type="button" class="btn btn-success") +
+
+    .content
+      each post in posts
+        .postStyle
+          a(href= post.url): h1 #{post.subject}
+          img(src= post.img)

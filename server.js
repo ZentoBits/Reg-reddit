@@ -19,13 +19,17 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 // routes
 app.get('/', (req, res) => {
-  res.render('index')
+  makePost.find()
+  .then((posts) => {
+    res.render('index', {posts})
+  })
 })
 
 app.get('/makePost', (req, res) => {
   res.render('makePost')
 })
 
+// makes new post
 app.post('/makePost', (req, res) => {
   console.log('touch my body', req.body);
   makePost
